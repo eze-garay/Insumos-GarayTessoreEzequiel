@@ -1,9 +1,9 @@
 
-
+import './CartWidget.css'
 
 const CardWidget = () => {
     return (
-        <div>
+        <div className="ContainerCart">
             <img src='./Carrito.png' width="20" alt="CardWidget"/>
             o
         </div>

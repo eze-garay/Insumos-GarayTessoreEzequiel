@@ -1,0 +1,19 @@
+.ContainerList{
+   
+}
+.ListTitle{
+    
+    font-weight: normal;
+    margin-top: 50px;
+
+}
+.ListP{
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: center; 
+    margin:0px; 
+    overflow: hidden; 
+    padding: 50px 50px 50px 50px; 
+   
+}
