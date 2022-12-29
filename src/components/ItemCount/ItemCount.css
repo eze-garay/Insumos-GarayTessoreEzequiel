@@ -1,0 +1,21 @@
+.Numero{text-align: center;font-size: 30px;text-shadow: 0 2px  rgb(244, 209, 10);}
+
+.Contador{
+    text-align: center;
+    margin: auto;
+    padding: 50px 0;
+    transition: all .5s;
+}
+.Button{
+    border: none;
+    background-color: rgb(244, 209, 10);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+}
+Button:hover{
+    background-color: rgb(252, 167, 9);
+}
