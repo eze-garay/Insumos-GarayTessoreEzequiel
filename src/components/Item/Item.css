@@ -1,0 +1,46 @@
+body{
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+img{
+    max-width: 100%;
+}
+.Card{
+    max-width: 350px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 0 0 12px  rgb(244, 209, 10);
+}
+.CardHeader img{
+    border-radius: 8px 8px 0 0;
+    max-height: 200px;
+    height: 200px;
+    width: 100%;
+}
+.CardFooter{
+    display: flexbox;
+}
+
+.CardCategoria{
+    margin-top: 1rem;
+    text-align: left;
+}
+.CardCategoria span {
+    background: #25c4d8 ;
+    color: #fff;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    
+}
+.CardCategoria h1{
+    text-align: center;
+}
+.CardWard{
+    display: flex;
+    flex-flow: wrap;
+}
+.CardText p{
+    text-align: justify;
+    line-height: 25px;
+    margin: 10px;
+}

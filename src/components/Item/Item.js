@@ -6,19 +6,19 @@ const Item = ({prod}) => {
         <div className='CardWard'>
             <article className='Card'>
                 <header className='CardHeader'>
-                    <h1>{prod.name}</h1>
-                    <img src={prod.img} />
+                    <img src={prod.img} alt='Imagen'/>
                 </header>
                 <footer className='CardFooter'>
                     <div className='CardCategoria'>
                         <span>{prod.category}</span>
+                        <h1>{prod.name}</h1>
                     </div>
                     <div className='CardText'>
-                        <h1>{prod.price}</h1>
+                        <h2>${prod.price}</h2>
                         <p>{prod.description} </p>
                     </div>
                     <div className='CardStock'>
-                        <h1>{prod.stock}</h1>
+                        <span>Stock disponible = {prod.stock}</span>
                     </div>
                 </footer>
             </article>

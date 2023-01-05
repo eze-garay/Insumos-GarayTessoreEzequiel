@@ -1,10 +1,9 @@
 
 *{
     transition: all 0.3s ease-in-out;
-  }
+}
   
 .Container {
-    clear: both;
     overflow: auto;
     display: flex;
     align-items: center;
@@ -12,15 +11,24 @@
     box-shadow: 10px 5px 5px  rgb(244, 209, 10);
     
 
-  }
+}
   
 .Ul li {
     display: inline-block;
     padding-left: 50px;
     font-size: 20px;
     font-family: raleway;
-  }
+}
   
 .Ul li:hover {
     color: rgb(244, 209, 10);
-  }
+}
+
+@media (max-width: 400px) {
+  .Ul li {
+    display: flex;
+    font-size: 20px;
+    font-family: raleway;
+}
+}
+
