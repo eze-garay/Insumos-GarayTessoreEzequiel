@@ -13,7 +13,7 @@ const ItemCount = ({onAdd, stock,}) => {
         }
     }
     const increment = () =>{
-        if (0 <= count || count <= stock) {
+        if (count <stock) {
             SetCount (prev => prev + 1) 
         }
         
