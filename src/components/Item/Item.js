@@ -1,4 +1,5 @@
 import'./Item.css'
+import React from 'react'
 
 const Item = ({prod}) => {
     return (
@@ -6,6 +7,7 @@ const Item = ({prod}) => {
             <article className='Card'>
                 <header className='CardHeader'>
                     <h1>{prod.name}</h1>
+                    <img src={prod.img} />
                 </header>
                 <footer className='CardFooter'>
                     <div className='CardCategoria'>
