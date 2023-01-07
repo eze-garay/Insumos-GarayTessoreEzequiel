@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ContainerItemDetail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    padding: 20px; 
+}
+.ContainerCardDetail{
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: beige;
+    border-radius: 2px;
+    box-shadow: 0 0 12px  rgb(244, 209, 10);
+}
+
+.Header{
+    border-left: 1px solid #ddd ;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.DescriptionCardDetail{
+    position: relative;
+    padding: 30px;
+    text-align: justify;
+}
+.DescriptionCardDetail h4{
+    text-align: center;
+    margin: 20px 30px;
+}
+.Header img {
+    
+    border-radius: 8px;
+}
+.Header h2, h3 {
+    margin: 20px;
+}
+.ConteinerCount{
+    margin-top: 25px;
+}
+
+@media (max-width:600px) {
+    .ContainerItemDetail{
+        display: block;
+        padding-top: 30px;
+    }
+
+    .ContainerCardDetail{
+        display: block;
+        height: auto;
+        width: auto;
+    }
+}
