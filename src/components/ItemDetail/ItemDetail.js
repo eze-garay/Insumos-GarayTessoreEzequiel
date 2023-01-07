@@ -8,7 +8,7 @@ const ItemDetail = ({product}) => {
 
     return (
         <div className="ContainerItemDetail">
-        {product.map((prod) => {
+        {product.map ((prod) => {
             return (
                 <article className='ContainerCardDetail' key={prod.id}>
                     <div className='Header'>

@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     useEffect ( () => {
     
        setLoading(true)
-        getProducts(document.getElementById ('id:2')).then(productsFormApi => {
+        getProducts().then(productsFormApi => {
             setProducts(productsFormApi)
         }).catch(error => {
             setError(false)
