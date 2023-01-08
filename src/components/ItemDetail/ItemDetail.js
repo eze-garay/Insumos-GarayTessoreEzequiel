@@ -1,35 +1,41 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import React, { useEffect,useState } from "react"
 
 
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({products}) => {
 
+    const [ItemFind, setItemFind]= useState([])
 
+    useEffect (()=> {
+        setItemFind(products.find(products => {
+                return products.id = 2;
+                })) 
+    },[products] )
+    console.log(ItemFind)
+   
+
+    
     return (
-        <div className="ContainerItemDetail">
-        {product.map ((prod) => {
-            return (
-                <article className='ContainerCardDetail' key={prod.id}>
+        <div className="ContainerItemDetail" key={ItemFind.id}>
+                <article className='ContainerCardDetail'>
                     <div className='Header'>
-                        <img  src={prod.img} alt='Imagen'></img>
-                        <h2>{prod.name} </h2>
-                        <h3>${prod.price}</h3>
+                        <img alt='Imagen' src={ItemFind.img}></img>
+                        <h2>{ItemFind.name}</h2>
+                        <h3>{ItemFind.price}</h3>
                     </div>
                     <div className='DescriptionCardDetail'>
-                        <p className='DescriptionText'>{prod.description} </p>
-                        <h4>{prod.stock} </h4>
+                        <p className='DescriptionText'>{ItemFind.description}</p>
+                        <h4>{ItemFind.stock}</h4>
                         <div className='ConteinerCount'>
                         <ItemCount/>
                         </div>
                     </div>
                 </article>
-         )}
- 
-        )}
         </div>
 
-    )
+    );
 
 }
 
