@@ -4,8 +4,9 @@
 }
   
 .Container {
-    overflow: auto;
+   
     display: flex;
+    background: transparent;
     align-items: center;
     justify-content: center;
     box-shadow: 10px 5px 5px  rgb(244, 209, 10);
@@ -13,22 +14,29 @@
 
 }
   
-.Ul li {
-    display: inline-block;
-    padding-left: 50px;
-    font-size: 20px;
-    font-family: raleway;
+.Categories {
+    display: flex;
 }
   
-.Ul li:hover {
+.Categories :hover {
     color: rgb(244, 209, 10);
 }
-
-@media (max-width: 400px) {
-  .Ul li {
+.CategoriesLink{
+    text-decoration: none;
+    margin: 0 30px;
+    color: black;
+    
     display: flex;
-    font-size: 20px;
-    font-family: raleway;
+    align-self: center;
+   justify-content: center;
+    align-items: center;
 }
+
+@media (max-width:660px) {
+    .CategoriesLink{
+        display: block;
+        margin: 5px;
+    }        
 }
+
 

@@ -1,35 +1,27 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import React, { useEffect,useState } from "react"
 
 
 
-const ItemDetail = ({products}) => {
-
-    const [ItemFind, setItemFind]= useState([])
-
-    useEffect (()=> {
-        setItemFind(products.find(products => {
-                return products.id = 2;
-                })) 
-    },[products] )
-    console.log(ItemFind)
-   
-
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+    const handleOnAdd = (quantity) => {
+        console.log(`agregue al carrito ${quantity} ${name}`)
+    }
     
     return (
-        <div className="ContainerItemDetail" key={ItemFind.id}>
+        <div className="ContainerItemDetail" key={id}>
                 <article className='ContainerCardDetail'>
                     <div className='Header'>
-                        <img alt='Imagen' src={ItemFind.img}></img>
-                        <h2>{ItemFind.name}</h2>
-                        <h3>{ItemFind.price}</h3>
+                        <img alt='Imagen' src={img}></img>
+                        <h2>{name}</h2>
+                        <h3>Precio: ${price}</h3>
+                        <h4>{category}</h4>
                     </div>
                     <div className='DescriptionCardDetail'>
-                        <p className='DescriptionText'>{ItemFind.description}</p>
-                        <h4>{ItemFind.stock}</h4>
+                        <p className='DescriptionText'>Descripción: {description}</p>
+                        <h4>Stock disponible = {stock}</h4>
                         <div className='ConteinerCount'>
-                        <ItemCount/>
+                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
                         </div>
                     </div>
                 </article>

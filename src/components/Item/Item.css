@@ -4,6 +4,29 @@ body{
 img{
     max-width: 100%;
 }
+
+.CardButton{
+    background-color: white; 
+    border: 2px solid rgb(244, 209, 10) ;
+    color: rgb(244, 209, 10);
+    background: transparent;
+    border: 2px solid rgb(244, 209, 10) ;
+    border-radius: 6px;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.CardButton:hover{
+    background-color:rgb(244, 209, 10) ;
+    color: white;
+}
 .Card{
     max-width: 350px;
     background-color: #f8f8f8;
@@ -18,10 +41,12 @@ img{
     width: 100%;
 }
 .CardFooter{
+    text-align: center;
     display: flexbox;
 }
 
 .CardCategoria{
+    text-align: center;
     margin-top: 1rem;
     text-align: left;
 }
@@ -33,14 +58,10 @@ img{
     
 }
 .CardCategoria h1{
+    padding: 20px;
     text-align: center;
 }
 .CardWard{
     display: flex;
     flex-flow: wrap;
-}
-.CardText p{
-    text-align: justify;
-    line-height: 25px;
-    margin: 10px;
 }
