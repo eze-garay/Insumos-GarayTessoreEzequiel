@@ -38,6 +38,7 @@
 }
 .Header img {
     
+    width: 100%;
     border-radius: 8px;
 }
 .Header h2, h3 {

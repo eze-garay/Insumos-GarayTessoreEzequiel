@@ -37,7 +37,7 @@ if (error) {
 
 return (
         <div className='ContainerItemDetail'>
-            <ItemDetail {...products}/>
+            <ItemDetail {...products} />
         </div>
     )
 } 

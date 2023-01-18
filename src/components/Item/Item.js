@@ -2,6 +2,7 @@ import'./Item.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Item = ({id, img, category, name, price, }) => {
     return (
         <div className='CardWard'>
@@ -21,6 +22,7 @@ const Item = ({id, img, category, name, price, }) => {
                 </footer>
             </article>
         </div>
+    
     )
    
 }
