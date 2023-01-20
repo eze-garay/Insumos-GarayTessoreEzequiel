@@ -34,8 +34,8 @@
 
 @media (max-width:660px) {
     .CategoriesLink{
-        display: block;
-        margin: 5px;
+        margin: 0;
+    
     }        
 }
 
