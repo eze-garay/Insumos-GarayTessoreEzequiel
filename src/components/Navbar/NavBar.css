@@ -1,42 +1,92 @@
 
 *{
-    transition: all 0.3s ease-in-out;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        text-decoration: none;
+
+
 }
+
+button{
+    display: block;
+}
+
   
 .Container {
-   
+    width: 100%;
+    padding: 1rem;
     display: flex;
-    background: transparent;
+    flex-flow:  row wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     box-shadow: 10px 5px 5px  rgb(244, 209, 10);
+   
+}
+
+.Logo{
+    width: 8rem;
+    height: 8rem;
+}
+.ContainerButtom{
+    display: none;
+    cursor: pointer;
+
+}
+.LogoHamb{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+
+}
+
+.ContainerUl{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
     
 
 }
-  
-.Categories {
-    display: flex;
+.Containerli{
+    list-style: none;
+    margin: 0.5em;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    font-size: 15px; 
+
+
 }
-  
-.Categories :hover {
+.CategoriesLink:hover{
     color: rgb(244, 209, 10);
 }
-.CategoriesLink{
-    text-decoration: none;
-    margin: 0 30px;
-    color: black;
-    
-    display: flex;
-    align-self: center;
-   justify-content: center;
-    align-items: center;
+
+
+@media screen and (max-width:500px) {
+    .ContainerButtom{
+        display: flex;
+        align-items: flex-end;
+    }
+    .ContainerNav{
+        width: 100%;
+        display: flex;
+        flex-flow:  column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 0vh;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .ContainerNav.isActive{
+        height: 30vh;
+        opacity: 1;
+    }
+    .ContainerUl {
+        flex-direction: column;
+    }
+    .Containerli{
+        margin: 0.7em 0;
+    }
 }
 
-@media (max-width:660px) {
-    .CategoriesLink{
-        margin: 0;
-    
-    }        
-}
 
 
