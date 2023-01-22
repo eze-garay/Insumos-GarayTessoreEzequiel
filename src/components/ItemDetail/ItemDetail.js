@@ -37,7 +37,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock, }) => 
                         <div className='ConteinerCount'>
                             {
                                isInCart (id) ? (
-                                    <Link to='/cart'>Terminar Compra</Link>
+                                    <Link className='CarLink' to={`/car`}>Terminar Compra</Link>
                                 ) : (<ItemCount onAdd={handleOnAdd} stock={stock}/>)
                             }
                         </div>

@@ -60,13 +60,15 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 300px) {
     .ContainerLoader{
-   
-        position: relative;
-        width: 40px;
-        height: 40px;
-        margin: 60px;
+        margin-left: 10%;
+        
+    }
+}
+@media (min-width: 600px) {
+    .ContainerLoader{
+        margin-left: 30%;
         
     }
 }

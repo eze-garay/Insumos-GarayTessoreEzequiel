@@ -7,6 +7,7 @@
     transition: all .5s;
 }
 .Button{
+    display: inline;
     border: none;
     background-color: rgb(244, 209, 10);
     padding: 10px;

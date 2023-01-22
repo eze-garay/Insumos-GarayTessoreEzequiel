@@ -27,12 +27,26 @@ export const CartProvider = ({children}) => {
         })
         return accu
     }
+     
+    const clear = () => {
+        setCart([])
+    };
+
+    const sumTotal = () => {
+        return cart.reduce((total, products) => total += products.quantity * products.price, 0);
+    } 
+
+    const removeItem = (id) => {
+        const deleted = cart.filter((cart) => cart.id !== id);
+        setCart(deleted)
+        getTotalQuantity(cart.quantity -1);
+    };
 
 
     const totalQuantity = getTotalQuantity ()
     
 return (
-        <CartContext.Provider value={{addItem,isInCart,totalQuantity}}>
+        <CartContext.Provider value={{ cart,addItem,isInCart,sumTotal,totalQuantity,removeItem,clear}}>
             { children }
         </CartContext.Provider>
     )

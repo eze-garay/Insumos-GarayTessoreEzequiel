@@ -1,0 +1,83 @@
+body{
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+.ContainerVacio{
+    position: relative;
+}
+.ContainerH{
+    margin-top: 50px;
+    position: absolute;
+    left: 20%;
+    
+}
+.ContainerB{
+    position: absolute;
+    left: 30%;
+    margin-top: 200px;
+
+}
+.ContainerTable{
+    display: flex;
+    margin: 150px auto;
+    
+    box-shadow: 10px 5px 5px  rgb(244, 209, 10);
+}
+.Table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+thead{
+    background-color: rgba(239, 216, 10, 0.7);
+    color: white;
+
+}
+tr:nth-child(even){
+    background-color: rgb(221, 221, 221, 50%);
+}
+@media screen and (max-width: 600px) {
+       table {
+           width:100%;
+       }
+       thead {
+           display: none;
+       }
+       tr:nth-of-type(2n) {
+           background-color: inherit;
+       }
+       tr td:first-child {
+           background: #f0f0f0;
+           font-weight:bold;
+           font-size:1.3em;
+       }
+       tbody td {
+           display: block;
+           text-align:center;
+       }
+       tbody td:before {
+           content: attr(data-th);
+           display: block;
+           text-align:center;
+       }
+}
+body {font-size: 100%}
+
+h1 {font-size: 3em;}
+
+@media screen and (max-width: 600px) {
+h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+h1 {
+    font-size: 2em;
+  }
+}
+
