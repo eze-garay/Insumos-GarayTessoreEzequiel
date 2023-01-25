@@ -47,7 +47,7 @@ const Car = () => {
                             <td></td>
                             <td>Suma Total</td>
                             <td>$ {sumTotal()} </td>
-                            <Link to='/' ><td><button className='Button'>Finalizar</button></td></Link>
+                            <Link to='/chec' ><td><button className='Button'>Finalizar</button></td></Link>
                         </tr>
         
                     </tbody>

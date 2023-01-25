@@ -35,7 +35,7 @@ const toggleMenu = () => {
             <ul className='ContainerUl'>
                 <li className='Containerli' ><Link to={`/category/Computadora`} className='CategoriesLink'>Computadora</Link></li>
                 <li className='Containerli'><Link to={`/category/Notebook`} className='CategoriesLink'>Notebook</Link></li>
-                <li className='Containerli'><Link to={`/category/Perifericos`} className='CategoriesLink'>Perifericos</Link></li>
+                <li className='Containerli'><Link to={`/category/Periféricos`} className='CategoriesLink'>Perifericos</Link></li>
                 <li className='Containerli'><Link to={`/car`}><CartWidget totalQuantity={totalQuantity}/></Link></li>
             </ul>
         </nav>
