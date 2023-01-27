@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom'
 
 
 const Car = () => {
-    const {cart,totalQuantity,removeItem,clear,sumTotal} = useContext (CartContext);
+    const {cart,totalQuantity,removeItem,clear,sumTotal} = useContext (CartContext)
 
 
     if (totalQuantity === 0) {
         return (
             <div className='ContainerVacio'>
                 <h1 className='ContainerH'>No hay productos seleccionados</h1>
-                <Link to='/' ><button className='Button ContainerB'>Volver al inicio</button></Link>
+                <Link to={`/`} ><button className='Button ContainerB'>Volver al inicio</button></Link>
             </div>
         )
     }
@@ -46,7 +46,7 @@ const Car = () => {
                             <td></td>
                             <td>Suma Total</td>
                             <td>$ {sumTotal()} </td>
-                            <Link to={`/checkout`} ><td><button className='Button'>Finalizar</button></td></Link>
+                            <td><Link to={`/checkout`} ><button className='Button'>Finalizar</button></Link></td>
                         </tr>
                     </tbody>
                 </table>

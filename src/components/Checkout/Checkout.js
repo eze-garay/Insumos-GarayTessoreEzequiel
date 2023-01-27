@@ -1,4 +1,5 @@
 import './Checkout.css'
+import Loader from '../Loader/Loader'
 import { collection, query, where, documentId, getDocs, writeBatch, addDoc } from "firebase/firestore"
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
@@ -23,7 +24,7 @@ const Checkout = () => {
                     email: 'contact@sebaz.io'
                 },
                 items: cart,
-                total: sumTotal,
+                total: sumTotal()
             }
     
             const batch = writeBatch(db)
@@ -86,13 +87,13 @@ const Checkout = () => {
     }
 
     if(loading) {
-        return <h1>Generando orden...</h1>
+        return <Loader loader='Generando orden...' />
     }
 
     if(orderId) {
         return (
             <div>
-                <h1>El Id de su compra es: {orderId}</h1>
+                <h3 className='ContainerH'>El Id de su compra es: {orderId}</h3>
             </div>
         )
     }
