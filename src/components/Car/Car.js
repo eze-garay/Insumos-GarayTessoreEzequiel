@@ -23,7 +23,6 @@ const Car = () => {
 
 
     return (
-
             <div className='ContainerTable'>
                 <table className='Table'>
                     <thead>
@@ -47,15 +46,11 @@ const Car = () => {
                             <td></td>
                             <td>Suma Total</td>
                             <td>$ {sumTotal()} </td>
-                            <Link to='/chec' ><td><button className='Button'>Finalizar</button></td></Link>
+                            <Link to={`/checkout`} ><td><button className='Button'>Finalizar</button></td></Link>
                         </tr>
-        
                     </tbody>
-        
                 </table>
-        
             </div>
-        
             )
     
 }
