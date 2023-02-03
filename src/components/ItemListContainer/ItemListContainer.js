@@ -1,50 +1,19 @@
 import'./ItemListContainer.css'
-import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import Loader from '../Loader/Loader'
 import { useParams } from 'react-router'
-import { getDocs, collection,query, where } from 'firebase/firestore'
-import { db } from '../../services/firebase/firebaseConfig'
-
-
-
+import {getProducts } from '../../services/firebase/firestore/products'
+import { useAsync } from '../hook/useAsync'
 
 
 const ItemListContainer = ({greeting}) => {
-    const [products, setProducts]= useState([])
-    const [error, setError] = useState (false)
-    const [loading, setLoading] = useState (false)
-    const {categoryId} = useParams()
 
+const {categoryId} = useParams()
+const getProductsWhitCategory = () => getProducts (categoryId)
 
-
-
+const {data: products , error, loading} = useAsync (getProductsWhitCategory, [categoryId])
     
     
-    useEffect ( () => {
-       setLoading(true)
-
-       const collectionRef = categoryId ? query(collection(db, 'products'), where('category', '==', categoryId)): collection(db, 'products')
-
-       getDocs(collectionRef).then(response =>{
-        console.log(response)
-        const productsAdapted = response.docs.map(doc => {
-            const data = doc.data()
-            return {id: doc.id, ...data}
-        })
-         setProducts(productsAdapted)
-        }).catch(error => {
-        setError(false)
-        }).finally(() => {
-        setLoading(false)
-        })
-
-        
-       
-    }, [categoryId])
-    
-    
-
 if (loading) {
     return <Loader loader='Cargando...' /> 
 }

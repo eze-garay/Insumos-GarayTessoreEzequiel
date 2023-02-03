@@ -1,38 +1,16 @@
 import './ItemDetailContainer.css' 
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { useEffect, useState } from 'react'
 import Loader from '../Loader/Loader'
 import { useParams } from 'react-router'
-import { getDoc, doc } from 'firebase/firestore'
-import { db } from '../../services/firebase/firebaseConfig'
+import {useAsync } from '../hook/useAsync'
+import { getProductsId } from '../../services/firebase/firestore/products'
 
 
 const ItemDetailContainer = () => {
-    const [products, setProducts]= useState([])
-    const [error, setError] = useState (false)
-    const [loading, setLoading] = useState (false)
     const {productId} = useParams()
+    const getProductsWhitProduct = () => getProductsId (productId)
+    const {data: products , error, loading} = useAsync (getProductsWhitProduct, [productId])
 
-    
-    useEffect ( () => {
-    
-       setLoading(true)
-       const docRef = doc(db, 'products', productId)
-       getDoc(docRef).then(response => {
-        console.log (response)
-        const data = response.data ()
-        const productAdapted = { id: response.id, ...data}
-        setProducts(productAdapted)
-        }).catch(error => {
-        setError(false)
-        }).finally(() => {
-         setLoading(false)
-        })
-
-       
-        
-    }, [productId])
-    
 
 if (loading) {
     return <Loader loader='Cargando...' /> 

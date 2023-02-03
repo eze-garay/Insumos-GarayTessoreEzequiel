@@ -112,8 +112,8 @@ const Checkout = () => {
                     <h3 className='text'>Complete el siguiente formulario para continuar con la compra</h3>
                     <h4 className='text'> Su Orden:</h4>
                     {cart.map( product => (
-                        <div className="info-empresa">
-                            <ul className="servicios" key={product.id}>
+                        <div className="info-empresa" key={product.id}>
+                            <ul className="servicios" >
                             <li><i className="fa fa-mobile"></i>{product.quantity} {product.name}</li>
                             </ul>
                         </div>
@@ -124,20 +124,20 @@ const Checkout = () => {
                         <h3>Datos del titular</h3>
                         <form className="formulario">
                         <p>
-                            <label>Nombre</label>
-                            <input type="text" value={nombre} id="nombre" required onInput={(e) => {setNombre(e.target.value)}} />
+                            <label >Nombre</label>
+                            <input type="text"  value={nombre} id="nombre" onInput={(e) => {setNombre(e.target.value)}}/>
                         </p>
                         <p>
-                            <label>Correo</label>
-                            <input type="email" value={email} id="email" required onInput={(e) => {setEmail(e.target.value)}} />
+                            <label >Correo</label>
+                            <input type="email" value={email} id="email"  onInput={(e) => {setEmail(e.target.value)}}/>
                         </p>
                         <p>
                             <label>Teléfono</label>
-                            <input type="text" value={telefono} id="teléfono" required onInput={(e) => {setTelefono(e.target.value)}} />
+                            <input type="text" value={telefono} id="teléfono" onInput={(e) => {setTelefono(e.target.value)}}/>
                         </p>
                         <p className="full">
-                            <label>Mensaje</label>
-                            <textarea value={mensaje} id="mensaje" required onInput={(e) => {setMensaje(e.target.value)}}></textarea>
+                            <label >Mensaje</label>
+                            <textarea value={mensaje} id="mensaje" onInput={(e) => {setMensaje(e.target.value)}}></textarea>
                         </p>
                         <p className="full">
                             <button className="boton-enviar" onClick={createOrder}>Finalizar Compra</button>
