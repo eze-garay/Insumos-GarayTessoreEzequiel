@@ -4,10 +4,12 @@ import { collection, query, where, documentId, getDocs, writeBatch, addDoc } fro
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../services/firebase/firebaseConfig"
+import { NotificacionContext } from '../../notification/NotificationService'
 
 import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
+    const setNotification = useContext (NotificacionContext)
     const [nombre, setNombre] = useState ('')
     const [telefono, setTelefono] = useState ('')
     const [email, setEmail] = useState ('')
@@ -15,6 +17,7 @@ const Checkout = () => {
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState('')
     const { cart, sumTotal, clear } = useContext(CartContext)
+    
 
     const navigate = useNavigate()
 
@@ -91,6 +94,20 @@ const Checkout = () => {
         
     }
 
+    const validarForm = (e) => {
+        e.preventDefault ();
+        if (nombre.length === "" || email.length === "" || telefono.length === "" || mensaje.length === "") {
+            setNotification('red',`es necesario completar todos los campos`,5)
+            return;
+        }            
+        if (isNaN(telefono) ) {
+            setNotification('red',`se deben colocar numero en la casilla de telefono`,5)
+            return;
+        }
+        
+        createOrder ();
+    }
+
     if(loading) {
         return <Loader loader='Generando orden...' />
     }
@@ -140,7 +157,7 @@ const Checkout = () => {
                             <textarea value={mensaje} id="mensaje" onInput={(e) => {setMensaje(e.target.value)}}></textarea>
                         </p>
                         <p className="full">
-                            <button className="boton-enviar" onClick={createOrder}>Finalizar Compra</button>
+                            <button className="boton-enviar" onClick={validarForm}>Finalizar Compra</button>
                         </p>
                         </form>
                     </div>
