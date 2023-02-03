@@ -43,6 +43,5 @@ Agradezco a profesores, turores de CoderHouse y compañeros por la guia y la bue
 
 Echo con [HTML] [CSS] [JavaScript] [ReactJS] [Firebase]
 
+![README](https://user-images.githubusercontent.com/112523188/216684249-68cee500-07cd-4ea3-a16b-dc754adbf41b.gif)
 
-
-![Alt text](../../../../README.gif)
