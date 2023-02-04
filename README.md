@@ -4,7 +4,7 @@ Proyecto ficticio de sitio e-commerce creado para el curso de ReactJS de CoderHo
 
 En este proyecto para el curso de ReactJS creamos varios componentes con el objetivo de construir un sitio e-commerce funcional. Los componentes centrales para el desarrollo de la funcionalidad son: ItemListContainer, ItemList, Item, ItemDetailContainer, ItemDetail, CartView, CartWidget, CartContext, NavBar, ItemCount.
 
-## Pasos a seguir
+## Como trabajar en el proyecto
 
 -Comenzamos instalando el software necesario, NodeJS, npm, etc. 
 -Luego con el comando npx create-react-app para generar la estructura básica de un proyecto ReactJS.
